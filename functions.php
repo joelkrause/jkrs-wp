@@ -14,6 +14,8 @@ add_action('init', 'jquery');
 function theme_styles() {
     wp_enqueue_style( 'style', get_stylesheet_directory_uri() .'/lib/styles/css/main.css', array(), 'all' );
     wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() .'/lib/scripts/scripts.js', array(), 'all' );
+    wp_enqueue_script( 'instantload', get_stylesheet_directory_uri() .'/lib/scripts/src/instantload.min.js', array(), 'all' );
+    wp_localize_script( 'scripts', 'ajax_postajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 /*
@@ -44,4 +46,13 @@ function my_acf_json_save_point( $path ) {
     // update path
     $path = get_stylesheet_directory() . '/acf-json';
     return $path;
+}
+
+add_action('wp_ajax_nopriv_getPosts', 'getPosts' );
+add_action('wp_ajax_getPosts', 'getPosts' );
+
+function getPosts(){
+$keyword = $_POST["keywords"];
+echo $keyword;
+exit();
 }

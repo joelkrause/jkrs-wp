@@ -35,7 +35,7 @@ html {
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    font-family: 'Inter';
+    font-family: 'Space';
     margin: 0;
     padding: 0;
     font-size: 1.215rem;
@@ -56,5 +56,16 @@ html {
     img {
         width: 125px;
         border-radius: 50%;
+    }
+
+    input {
+        appearance: none;
+        border: 1px solid #333;
+        width: 100%;
+        appearance: none;
+        background-color: var(--mainColor);
+        padding: .5rem;
+        border-radius: 3px;
+        color: var(--lightColor);
     }
 }
