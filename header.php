@@ -16,7 +16,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 ?>
 <header class="site__header">
     <div class="site__header-logo">
-        <a href="#">
+        <a href="<?php echo home_url();?>">
             J<span>oel Krause </span>&mdash;
         </a>
     </div>

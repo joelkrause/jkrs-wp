@@ -1,3 +1,4 @@
+@import url("https://rsms.me/inter/inter.css");
 *,
 ::after,
 ::before {
@@ -302,24 +303,21 @@ html {
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
-  font-family: 'Space';
+  font-family: 'Inter';
   margin: 0;
   padding: 0;
-  font-size: 1.25rem;
+  font-size: 1.215rem;
   line-height: 1.75rem; }
 
 .wrapper {
-  max-width: 65vw;
+  max-width: 50vw;
   padding: 0 1rem;
   margin: 0 auto; }
 
 .page__hero {
-  background: var(--lightColor);
-  min-height: 35vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5vw 0; }
+  background: var(--mainColor);
+  color: var(--lightColor);
+  padding: 10vw 0; }
   .page__hero img {
     width: 125px;
     border-radius: 50%; }
@@ -359,7 +357,7 @@ h6 {
     margin-left: -120px;
     opacity: 0; }
   .site__header a {
-    color: var(--mainColor);
+    color: var(--lightColor);
     text-decoration: none; }
   .site__header-nav ul,
   .site__header-nav li {
@@ -371,5 +369,12 @@ h6 {
     justify-content: flex-end; }
     .site__header-nav ul li:not(:last-of-type) {
       margin-right: 1rem; }
+
+.posts__cards:not(:last-of-type) {
+  padding: 3rem 0; }
+.posts__cards header {
+  display: flex; }
+  .posts__cards header h2 {
+    flex-grow: 1; }
 
 /*# sourceMappingURL=main.css.map */

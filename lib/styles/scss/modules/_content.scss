@@ -1,0 +1,13 @@
+.posts__cards {
+    &:not(:last-of-type) {
+        padding: 3rem 0;
+    }
+
+    header {
+        display: flex;
+
+        h2 {
+            flex-grow: 1;
+        }
+    }
+}
