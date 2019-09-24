@@ -1,0 +1,49 @@
+.site__header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &-logo {
+        span {
+            transition: all 0.35s;
+        }
+
+        &.small {
+            span {
+                margin-left: -120px;
+                opacity: 0;
+            }
+        }
+    }
+
+    a {
+        color: var(--mainColor);
+        text-decoration: none;
+    }
+
+    &-nav {
+
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+                &:not(:last-of-type) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

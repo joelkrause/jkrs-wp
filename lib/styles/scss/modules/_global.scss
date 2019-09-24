@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Space';
+    src: url('../../fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
+        url('../../fonts/SpaceGrotesk-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Space';
+    src: url('../../fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
+        url('../../fonts/SpaceGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Space';
+    src: url('../../fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
+        url('../../fonts/SpaceGrotesk-SemiBold.woff') format('woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Space';
+    src: url('../../fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
+        url('../../fonts/SpaceGrotesk-Bold.woff') format('woff');
+    font-weight: 700;
+}
+
+body,
+html {
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    font-family: 'Space';
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.wrapper {
+    max-width: 65vw;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.page__hero {
+    background: var(--lightColor);
+    min-height: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw 0  ;
+
+    img {
+        width: 125px;
+        border-radius: 50%;
+    }
+}
