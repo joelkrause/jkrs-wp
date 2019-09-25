@@ -377,7 +377,7 @@ h6 {
     display: flex;
     justify-content: flex-end; }
     .site__header-nav ul li:not(:last-of-type) {
-      margin-right: 1rem; }
+      margin-right: 2rem; }
 
 .posts__cards:not(:last-of-type) {
   padding: 3rem 0; }
