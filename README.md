@@ -4,3 +4,6 @@
 - instantclick
 
 ## Plugins Used
+- Google Native Lazy Load
+- WPPusher
+- Really Simple SSL
