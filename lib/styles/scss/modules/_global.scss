@@ -26,8 +26,6 @@
     font-weight: 700;
 }
 
-@import url('https://rsms.me/inter/inter.css');
-
 body,
 html {
     text-rendering: optimizeLegibility;
@@ -43,15 +41,28 @@ html {
 }
 
 .wrapper {
-    max-width: 50vw;
+    width: 90vw;
     padding: 0 1rem;
     margin: 0 auto;
+
+    @include breakpoint(up, lg) {
+        width: 50vw;
+    }
+}
+
+[data-animate] {
+    opacity: 0;
+    transform: translateY(75px);
 }
 
 .page__hero {
-    background: var(--mainColor);
-    color: var(--lightColor);
-    padding: 10vw 0;
+    @extend .background_pattern;
+    color: var(--mainColor);
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 
     img {
         width: 125px;
@@ -63,9 +74,9 @@ html {
         border: 1px solid #333;
         width: 100%;
         appearance: none;
-        background-color: var(--mainColor);
+        background-color: var(--lightAccentColor);
         padding: .5rem;
         border-radius: 3px;
-        color: var(--lightColor);
+        color: var(--mainColor);
     }
 }

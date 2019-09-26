@@ -15,12 +15,12 @@ if ( function_exists( 'wp_body_open' ) ) {
 }
 ?>
 <header class="site__header">
-    <div class="site__header-logo">
+    <div class="site__header-logo" data-animate>
         <a href="<?php echo home_url();?>">
-            J<span>oel Krause </span>&mdash;
+            Joel Krause &mdash;
         </a>
     </div>
-    <nav class="site__header-nav">
+    <nav class="site__header-nav" data-animate>
         <?php
         wp_nav_menu( array(
             'theme_location' => 'Primary',
