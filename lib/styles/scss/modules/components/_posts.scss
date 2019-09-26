@@ -2,3 +2,48 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
+.post__card {
+    a {
+        color: var(--mainColor);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &-icon {
+        width: 70px;
+        min-width: 70px;
+        height: 70px;
+        background: blue;
+        border-radius: 50%;
+        margin-right: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: var(--lightColor);
+    }
+
+    &-title {
+        flex-grow: 1;
+    }
+
+    &-date {
+        white-space: nowrap;
+    }
+}
+
+.post__icon {
+    width: 85px;
+    height: 85px;
+    background: blue;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: var(--lightColor);
+}

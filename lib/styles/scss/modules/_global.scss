@@ -26,6 +26,8 @@
     font-weight: 700;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Karma:400,700&display=swap');
+
 body,
 html {
     text-rendering: optimizeLegibility;
@@ -33,7 +35,7 @@ html {
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    font-family: 'Space';
+    font-family: 'Karma';
     margin: 0;
     padding: 0;
     font-size: 1.215rem;
@@ -56,8 +58,9 @@ html {
 }
 
 .page__hero {
-    @extend .background_pattern;
-    color: var(--mainColor);
+    // @extend .background_pattern;
+    background: var(--mainColor);
+    color: var(--lightColor);
     height: 75vh;
     display: flex;
     flex-direction: column;
@@ -74,9 +77,9 @@ html {
         border: 1px solid #333;
         width: 100%;
         appearance: none;
-        background-color: var(--lightAccentColor);
+        background: var(--mainColor);
         padding: .5rem;
         border-radius: 3px;
-        color: var(--mainColor);
+        color: var(--lightColor);
     }
 }
