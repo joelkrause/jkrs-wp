@@ -11,6 +11,10 @@
     width: 100%;
 
     &-logo {
+        svg {
+            width: 50px;
+        }
+
         span {
             transition: all 0.35s;
         }

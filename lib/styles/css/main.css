@@ -307,6 +307,7 @@ html {
   -webkit-font-smoothing: antialiased;
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
   font-family: 'Space';
+  font-weight: 500;
   margin: 0;
   padding: 0;
   font-size: 1.215rem;
@@ -363,7 +364,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600; }
+  font-weight: 700; }
 
 .site__header {
   padding: 2rem;
@@ -376,6 +377,8 @@ h6 {
   top: 0;
   left: 0;
   width: 100%; }
+  .site__header-logo svg {
+    width: 50px; }
   .site__header-logo span {
     transition: all 0.35s; }
   .site__header-logo.small span {
