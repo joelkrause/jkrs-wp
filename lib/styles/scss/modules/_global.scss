@@ -56,8 +56,7 @@ html {
 }
 
 .page__hero {
-    background: var(--mainColor);
-    color: var(--lightColor);
+    color: var(--mainColor);
     height: 75vh;
     display: flex;
     flex-direction: column;
@@ -71,12 +70,12 @@ html {
 
     input {
         appearance: none;
-        border: 1px solid #333;
+        border: 1px solid #ccc;
         width: 100%;
         appearance: none;
-        background: var(--mainColor);
+        background: var(--lightColor);
         padding: .5rem;
         border-radius: 3px;
-        color: var(--lightColor);
+        color: var(--mainColor);
     }
 }

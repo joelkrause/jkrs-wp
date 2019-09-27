@@ -325,8 +325,7 @@ html {
   transform: translateY(75px); }
 
 .page__hero {
-  background: var(--mainColor);
-  color: var(--lightColor);
+  color: var(--mainColor);
   height: 75vh;
   display: flex;
   flex-direction: column;
@@ -337,13 +336,13 @@ html {
     border-radius: 50%; }
   .page__hero input {
     appearance: none;
-    border: 1px solid #333;
+    border: 1px solid #ccc;
     width: 100%;
     appearance: none;
-    background: var(--mainColor);
+    background: var(--lightColor);
     padding: .5rem;
     border-radius: 3px;
-    color: var(--lightColor); }
+    color: var(--mainColor); }
 
 :root {
   --mainColor: #17181a;
@@ -383,7 +382,7 @@ h6 {
     margin-left: -120px;
     opacity: 0; }
   .site__header a {
-    color: var(--lightColor);
+    color: var(--mainColor);
     text-decoration: none; }
   .site__header-nav ul,
   .site__header-nav li {
