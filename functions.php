@@ -12,7 +12,7 @@ add_action('init', 'jquery');
  * Proper way to enqueue scripts and styles
  */
 function theme_styles() {
-    wp_enqueue_style( 'style', get_stylesheet_directory_uri() .'/lib/styles/css/main.css', array(), 'all' );
+    wp_enqueue_style( 'style', get_stylesheet_directory_uri() .'/lib/styles/css/main.css', array(),filemtime(get_stylesheet_directory().'/lib/styles/css/main.css') );
     wp_enqueue_script( 'FontAwesome', 'https://kit.fontawesome.com/8acb92c956.js', array(), 'all' );
     wp_enqueue_script( 'TweenMax', get_stylesheet_directory_uri() .'/lib/scripts/src/TweenMax.min.js', array(), 'all' );
     wp_enqueue_script( 'instantload', get_stylesheet_directory_uri() .'/lib/scripts/src/instantload.min.js', array(), 'all' );
