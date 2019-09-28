@@ -57,6 +57,7 @@ html {
 }
 
 .page__hero {
+    background:var(--lightAccentColor);
     color: var(--mainColor);
     height: 75vh;
     display: flex;

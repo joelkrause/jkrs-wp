@@ -326,6 +326,7 @@ html {
   transform: translateY(75px); }
 
 .page__hero {
+  background: var(--lightAccentColor);
   color: var(--mainColor);
   height: 75vh;
   display: flex;
