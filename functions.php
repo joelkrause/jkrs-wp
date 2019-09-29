@@ -78,3 +78,12 @@ function getPosts(){
     }
     exit();
 }
+
+function postDate(){
+    global $post;
+    $published_time = get_the_date();
+    $last_modified_time = get_the_modified_date();
+
+    echo 'Updated about '.$last_modified_time;
+    echo 'Published on '.$published_time;
+}

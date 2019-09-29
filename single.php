@@ -11,8 +11,7 @@ echo '<div class="page__hero">';
     echo '<div class="wrapper">';
         echo '<div class="post__icon" data-animate style="background-color:'.$icon_color.';">'.$icon.'</div>';
         echo '<h1 data-animate>'.get_the_title().'</h1>';
-        echo '<div class="post__updated" data-animate>Updated on '.get_the_modified_date().'</div>';
-        echo '<div class="post__date" data-animate>Published on '.get_the_date().'</div>';
+        postDate();
         echo '</div>';
         echo '</div>';
         

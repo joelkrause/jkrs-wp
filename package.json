@@ -1,0 +1,27 @@
+{
+  "name": "jkrs",
+  "version": "1.0.0",
+  "description": "WordPress theme for jkrs blog",
+  "main": "index.php",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelkrause/jkrs-wp.git"
+  },
+  "author": "Joel Krause",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joelkrause/jkrs-wp/issues"
+  },
+  "homepage": "https://github.com/joelkrause/jkrs-wp#readme",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
