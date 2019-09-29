@@ -1,14 +1,16 @@
 .site__header {
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
-    font-weight: 600;
-    font-size: 1.4rem;
-    position: fixed;
+    font-weight: 500;
+    font-size: 1.1rem;
     z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
+    font-family: var(--accentFont);
+
+    @include breakpoint(up, lg) {
+        padding: 2rem;
+        font-size: 1.4rem;
+    }
 
     &-logo {
         svg {
@@ -28,7 +30,7 @@
     }
 
     a {
-        color: var(--mainColor);
+        color: var(--lightColor);
         text-decoration: none;
     }
 

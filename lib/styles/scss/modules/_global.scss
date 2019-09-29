@@ -1,31 +1,3 @@
-@font-face {
-    font-family: 'Space';
-    src: url('../../fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
-        url('../../fonts/SpaceGrotesk-Regular.woff') format('woff');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Space';
-    src: url('../../fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
-        url('../../fonts/SpaceGrotesk-Medium.woff') format('woff');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'Space';
-    src: url('../../fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
-        url('../../fonts/SpaceGrotesk-SemiBold.woff') format('woff');
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'Space';
-    src: url('../../fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
-        url('../../fonts/SpaceGrotesk-Bold.woff') format('woff');
-    font-weight: 700;
-}
-
 body,
 html {
     text-rendering: optimizeLegibility;
@@ -33,20 +5,17 @@ html {
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    font-family: 'Space';
-    font-weight: 500;
     margin: 0;
     padding: 0;
-    font-size: 1.215rem;
-    line-height: 1.75rem;
+    background: var(--mainColor);
+    color: var(--lightColor);
 }
 
 .wrapper {
-    width: 90vw;
     padding: 0 1rem;
-    margin: 0 auto;
 
     @include breakpoint(up, lg) {
+        margin: 0 auto;
         width: 50vw;
     }
 }
@@ -57,13 +26,17 @@ html {
 }
 
 .page__hero {
-    background:var(--lightAccentColor);
-    color: var(--mainColor);
-    height: 75vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+
+    .blog & {
+        @include breakpoint(down, lg) {
+            height: 50vh;
+        }
+    }
 
     img {
         width: 125px;

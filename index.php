@@ -8,17 +8,18 @@ echo '<div class="page__hero">';
     echo '</div>';
 echo '</div>';
 echo '<div class="posts__wrapper wrapper">';
-    
-    $day_check = '';
-    
-    while (have_posts()) : the_post();
-        $day = get_the_date('Y');
-        if ($day != $day_check) {
-            echo '<h3 data-animate> '.get_the_date("Y") . '</h3>';
-        }
-        get_template_part('template-parts/post-card');
-        $day_check = $day;
-    endwhile;
+    echo '<div id="posts">';
+        $day_check = '';
+        
+        while (have_posts()) : the_post();
+            $day = get_the_date('Y');
+            if ($day != $day_check) {
+                echo '<h3 data-animate> '.get_the_date("Y") . '</h3>';
+            }
+            get_template_part('template-parts/post-card');
+            $day_check = $day;
+        endwhile;
+    echo '</div>';
 echo '</div>';
 get_footer();
 ?>

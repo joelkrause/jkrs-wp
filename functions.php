@@ -54,7 +54,27 @@ add_action('wp_ajax_nopriv_getPosts', 'getPosts' );
 add_action('wp_ajax_getPosts', 'getPosts' );
 
 function getPosts(){
-$keyword = $_POST["keywords"];
-echo $keyword;
-exit();
+    $keyword = $_POST["keywords"];
+    // Custom WP query search
+    $args_search = array(
+        's' => $keyword,
+        'order' => 'DESC',
+    );
+
+    $search = new WP_Query( $args_search );
+    $day_check = '';
+    if ( $search->have_posts() ) {
+        while ($search->have_posts()) {
+        $search->the_post();
+            $day = get_the_date('Y');
+            if ($day != $day_check) {
+                echo '<h3 data-animate> '.get_the_date("Y") . '</h3>';
+            }
+            get_template_part('template-parts/post-card');
+            $day_check = $day;
+        }
+    } else {
+        echo 'nothing to show';
+    }
+    exit();
 }
