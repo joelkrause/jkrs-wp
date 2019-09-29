@@ -14,12 +14,14 @@ echo '</div>';
 echo '<div class="posts__cards">';
     echo '<div class="wrapper">';
         echo '<h2 data-animate>Latest Posts</h2>';
-    echo '</div>';
-echo '</div>';
-
-echo '<div class="posts__cards">';
-    echo '<div class="wrapper">';
+        get_template_part('template-parts/latest_posts');
+        echo '</div>';
+        echo '</div>';
+        
+        echo '<div class="posts__cards">';
+        echo '<div class="wrapper">';
         echo '<h2 data-animate>Featured Posts</h2>';
+        get_template_part('template-parts/featured_posts');
     echo '</div>';
 echo '</div>';
 get_footer();
