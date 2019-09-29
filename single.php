@@ -16,11 +16,8 @@ echo '<div class="page__hero">';
         echo '</div>';
         
 echo '<div class="posts__wrapper wrapper">';
-    if(get_the_excerpt()){   
-        echo '<div class="post__excerpt" data-animate>'.get_the_excerpt().'</div>';
-    }
     if(get_the_post_thumbnail()){   
-        echo '<div class="post__excerpt" data-animate>'.get_the_post_thumbnail().'</div>';
+        echo '<div class="post__thumbnail" data-animate style="background-image:url('.get_the_post_thumbnail_url().');"></div>';
     }
     if ( have_posts() ) {
         while ( have_posts() ) {

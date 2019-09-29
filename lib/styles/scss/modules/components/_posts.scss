@@ -4,6 +4,8 @@
 }
 
 .post__card {
+    margin: 1.25rem 0;
+
     a {
         color: var(--lightColor);
         text-decoration: none;
@@ -46,4 +48,23 @@
     justify-content: center;
     font-size: 38px;
     color: var(--lightColor);
+}
+
+.post__excerpt {
+    font-family: var(--accentFont);
+    font-weight: 400;
+    color: #ececec;
+    padding: 0 0 2rem;
+}
+
+.post__thumbnail {
+    height: 45vh;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
+
+    @include breakpoint(up, lg) {
+        width: calc(100% + 15vw);
+        margin-left: -7.5vw;
+    }
 }
