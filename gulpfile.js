@@ -1,7 +1,8 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const del = require('del');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var del = require('del');
+var cssnano = require('gulp-cssnano');
 
 gulp.task('prefix', () =>
     gulp.src('lib/styles/css/main.css')
@@ -9,6 +10,7 @@ gulp.task('prefix', () =>
         overrideBrowserslist: ['last 99 versions'],
         cascade: false
     }))
+    .pipe(cssnano())
     .pipe(gulp.dest('lib/styles/css'))
 );
 
