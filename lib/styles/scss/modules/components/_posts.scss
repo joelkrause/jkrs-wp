@@ -37,19 +37,26 @@
     }
 }
 
-.post__indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #27ae60;
-    display: block;
+.post__updated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    &.up_to_date {
+    .post__indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
         background-color: #27ae60;
-    }
+        margin-right: 10px;
+        margin-top: -5px;
 
-    &.could_be_out_of_date {
-        background-color: red;
+        &.up_to_date {
+            background-color: #27ae60;
+        }
+
+        &.could_be_out_of_date {
+            background-color: red;
+        }
     }
 }
 

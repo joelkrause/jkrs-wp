@@ -105,5 +105,5 @@ function postDate(){
         $diff = 'Post was updated about '.$interval->i.' minutes ago';
         $indicator = 'up_to_date';
     }
-    echo '<span class="post__indicator '.$indicator.'"></span> '.$diff;
+    echo '<div class="post__updated" data-animate><span class="post__indicator '.$indicator.'"></span> '.$diff.'</div>';
 }
