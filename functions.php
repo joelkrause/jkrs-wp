@@ -84,6 +84,26 @@ function postDate(){
     $published_time = get_the_date();
     $last_modified_time = get_the_modified_date();
 
-    echo 'Updated about '.$last_modified_time;
-    echo 'Published on '.$published_time;
+    $datetime1 = date_create( get_the_modified_date() );
+    $datetime2 = date_create(); // current date
+    $interval = date_diff( $datetime1, $datetime2 );
+
+    // var_dump($interval);
+    if($interval->y){
+        $diff = 'Post was updated about '.$interval->y.' year ago';
+        $indicator = 'could_be_out_of_date';
+    } else if($interval->m){
+        $diff = 'Post was updated about '.$interval->m.' months ago';
+        $indicator = 'could_be_out_of_date';
+    } else if($interval->days){
+        $diff = 'Post was updated about '.$interval->days.' days ago';
+        $indicator = 'up_to_date';
+    } else if($interval->h){
+        $diff = 'Post was updated about '.$interval->h.' hours ago';
+        $indicator = 'up_to_date';
+    } else if($interval->i){
+        $diff = 'Post was updated about '.$interval->i.' minutes ago';
+        $indicator = 'up_to_date';
+    }
+    echo '<span class="post__indicator '.$indicator.'"></span> '.$diff;
 }

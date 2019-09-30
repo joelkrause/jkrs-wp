@@ -37,6 +37,22 @@
     }
 }
 
+.post__indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #27ae60;
+    display: block;
+
+    &.up_to_date {
+        background-color: #27ae60;
+    }
+
+    &.could_be_out_of_date {
+        background-color: red;
+    }
+}
+
 .post__icon {
     width: 85px;
     height: 85px;
