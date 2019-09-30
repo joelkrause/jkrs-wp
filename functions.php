@@ -96,7 +96,11 @@ function postDate(){
         $diff = 'Post was updated about '.$interval->m.' months ago';
         $indicator = 'could_be_out_of_date';
     } else if($interval->days){
-        $diff = 'Post was updated about '.$interval->days.' days ago';
+        if($interval->days == 1){
+            $diff = 'Post was updated about a day ago';
+        } else {
+            $diff = 'Post was updated about '.$interval->days.' days ago';
+        }
         $indicator = 'up_to_date';
     } else if($interval->h){
         $diff = 'Post was updated about '.$interval->h.' hours ago';
