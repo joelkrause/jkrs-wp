@@ -51,11 +51,15 @@
         margin-top: -5px;
 
         &.up_to_date {
-            background-color: #27ae60;
+            background: #27ae60;
         }
 
         &.could_be_out_of_date {
-            background-color: red;
+            background: #f39c12;
+        }
+
+        &.probably_out_of_date{
+            background:#e74c3c;
         }
     }
 }
