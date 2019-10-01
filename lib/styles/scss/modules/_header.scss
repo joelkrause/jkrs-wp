@@ -4,8 +4,9 @@
     justify-content: space-between;
     font-weight: 700;
     font-size: 1.1rem;
-    z-index: 1;
-    font-family: var(--accentFont); 
+    z-index: 2;
+    position: relative;
+    font-family: var(--accentFont);
 
     @include breakpoint(up, lg) {
         padding: 2rem;
