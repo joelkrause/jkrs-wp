@@ -4,6 +4,7 @@ $id = $post->ID;
 $categories = get_the_category($id);
 $category_id = $categories[0]->cat_ID;
 $icon = get_field('icon','category_'.$category_id);
+$icon = file_get_contents($icon['url']);
 $icon_color = get_field('icon_color','category_'.$category_id);
 get_header();
 

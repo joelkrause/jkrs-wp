@@ -49,7 +49,7 @@ pre {
         }
     }
 
-    svg {
+    >svg {
         position: absolute;
     }
 
@@ -58,12 +58,11 @@ pre {
 
         .post__icon {
             margin: 0 auto 25px;
-        }
-    }
 
-    img {
-        width: 125px;
-        border-radius: 50%;
+            svg {
+                width: 30px;
+            }
+        }
     }
 
     input {

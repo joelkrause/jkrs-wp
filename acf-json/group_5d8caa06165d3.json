@@ -6,7 +6,7 @@
             "key": "field_5d8caa2aecfa5",
             "label": "Icon",
             "name": "icon",
-            "type": "text",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_5d8cad177a8eb",
@@ -54,5 +59,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1569500446
+    "modified": 1569962663
 }
