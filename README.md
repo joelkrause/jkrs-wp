@@ -1,11 +1,11 @@
 # WordPress Theme for joelkrause.co
 
 ## Scripts Used
-- instantclick
+- quicklink by google chrome team
+- gsap/greensock
 
 ## Plugins Used
 - Google Native Lazy Load
-- WPPusher
 - Really Simple SSL
 
 ## Build tools

@@ -15,7 +15,7 @@ function theme_styles() {
     $stylesheet = get_stylesheet_directory().'/lib/styles/css/main.css';
     $script = get_stylesheet_directory().'/lib/scripts/scripts.min.js';
     wp_enqueue_style( 'style', get_stylesheet_directory_uri() .'/lib/styles/css/main.css', array(),filemtime($stylesheet) );
-    wp_enqueue_script( 'FontAwesome', 'https://kit.fontawesome.com/8acb92c956.js', array(), 'all' );
+    // wp_enqueue_script( 'FontAwesome', 'https://kit.fontawesome.com/8acb92c956.js', array(), 'all' );
     wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() .'/lib/scripts/scripts.min.js', array(), filemtime($script) );
     wp_localize_script( 'scripts', 'ajax_postajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 }
@@ -53,7 +53,8 @@ function my_acf_json_save_point( $path ) {
 add_action('wp_ajax_nopriv_getLink', 'getLink' );
 add_action('wp_ajax_getLink', 'getLink' );
 function getLink(){
-    $link = $_POST["url"];
+    $link = $_POST["link"];
+    echo $link;
     exit();
 }
 
