@@ -64,3 +64,19 @@ h6 {
     font-family: var(--accentFont);
     font-weight: 700;
 }
+
+p {
+    a {
+        position: relative;
+        border-bottom: 2px solid var(--lightColor);
+        color: var(--lightColor);
+        text-decoration: none;
+        transition: all 0.35s;
+
+        &:hover {
+            text-decoration: none;
+            border-bottom: 5px solid var(--lightColor);
+            color: var(--lightColor);
+        }
+    }
+}

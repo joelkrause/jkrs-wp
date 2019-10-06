@@ -10,6 +10,7 @@
     left: 0;
     width: 100%;
     font-family: var(--accentFont);
+    background: var(--mainColor);
 
     @include breakpoint(up, lg) {
         padding: 2rem;
@@ -39,6 +40,26 @@
     }
 
     &-nav {
+        display: flex;
+        align-items: center;
+
+        button {
+            margin: 0 0 0 25px;
+            padding: .5rem .75rem;
+            font-weight: 700;
+            border: 2px solid var(--lightColor);
+            color: var(--lightColor);
+            background: 0 0;
+            font-size: 1.25rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.35s;
+
+            &:hover {
+                background: var(--lightColor);
+                color: var(--mainColor);
+            }
+        }
 
         ul,
         li {
