@@ -27,7 +27,8 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Karma:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap');
+@import url('https://rsms.me/inter/inter.css');
 
 * {
     box-sizing: border-box;
@@ -36,7 +37,7 @@
 html,
 body {
     font-family: var(--mainFont);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.1rem;
     line-height: 1.75rem;
 

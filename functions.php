@@ -13,12 +13,10 @@ add_action('init', 'jquery');
  */
 function theme_styles() {
     $stylesheet = get_stylesheet_directory().'/lib/styles/css/main.css';
-    $script = get_stylesheet_directory().'/lib/scripts/scripts.js';
+    $script = get_stylesheet_directory().'/lib/scripts/scripts.min.js';
     wp_enqueue_style( 'style', get_stylesheet_directory_uri() .'/lib/styles/css/main.css', array(),filemtime($stylesheet) );
     wp_enqueue_script( 'FontAwesome', 'https://kit.fontawesome.com/8acb92c956.js', array(), 'all' );
-    wp_enqueue_script( 'TweenMax', get_stylesheet_directory_uri() .'/lib/scripts/src/TweenMax.min.js', array(), 'all' );
-    wp_enqueue_script( 'instantload', get_stylesheet_directory_uri() .'/lib/scripts/src/instantload.min.js', array(), 'all' );
-    wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() .'/lib/scripts/scripts.js', array(), filemtime($script) );
+    wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() .'/lib/scripts/scripts.min.js', array(), filemtime($script) );
     wp_localize_script( 'scripts', 'ajax_postajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
@@ -50,6 +48,13 @@ function my_acf_json_save_point( $path ) {
     // update path
     $path = get_stylesheet_directory() . '/acf-json';
     return $path;
+}
+
+add_action('wp_ajax_nopriv_getLink', 'getLink' );
+add_action('wp_ajax_getLink', 'getLink' );
+function getLink(){
+    $link = $_POST["url"];
+    exit();
 }
 
 add_action('wp_ajax_nopriv_getPosts', 'getPosts' );
@@ -92,30 +97,30 @@ function postDate(){
 
     // var_dump($interval);
     if($interval->y){
-        $diff = 'Post was updated about '.$interval->y.' year ago';
+        $diff = 'Updated about '.$interval->y.' year ago';
         $indicator = 'probably_out_of_date';
     } else if($interval->m){
-        $diff = 'Post was updated about '.$interval->m.' months ago';
+        $diff = 'Updated about '.$interval->m.' months ago';
         $indicator = 'could_be_out_of_date';
     } else if($interval->days){
         if($interval->days == 1){
-            $diff = 'Post was updated about a day ago';
+            $diff = 'Updated about a day ago';
         } else {
-            $diff = 'Post was updated about '.$interval->days.' days ago';
+            $diff = 'Updated about '.$interval->days.' days ago';
         }
         $indicator = 'up_to_date';
     } else if($interval->h){
-        $diff = 'Post was updated about '.$interval->h.' hours ago';
+        $diff = 'Updated about '.$interval->h.' hours ago';
         $indicator = 'up_to_date';
     } else if($interval->i){
         if($interval->i > 5){
-            $diff = 'Post was updated about '.$interval->i.' minutes ago';
+            $diff = 'Updated about '.$interval->i.' minutes ago';
         } else {
-            $diff = 'Post was updated a few minutes ago';
+            $diff = 'Updated a few minutes ago';
         }
         $indicator = 'up_to_date';
     } else if($interval->s){
-        $diff = 'Post was updated just now';
+        $diff = 'Updated just now';
         $indicator = 'up_to_date';
     }
     echo '<div class="post__updated" data-animate><span class="post__indicator '.$indicator.'"></span> '.$diff.'</div>';

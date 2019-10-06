@@ -7,6 +7,9 @@ html {
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
     margin: 0;
     padding: 0;
+}
+
+body {
     background: var(--mainColor);
     color: var(--lightColor);
 }
@@ -16,7 +19,7 @@ html {
 
     @include breakpoint(up, lg) {
         margin: 0 auto;
-        width: 50vw;
+        width: 55vw;
     }
 }
 
@@ -36,8 +39,15 @@ pre {
     }
 }
 
+svg {
+    &.accent__blob {
+        position: absolute;
+        z-index: -1;
+    }
+}
+
 .page__hero {
-    min-height: 50vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -49,8 +59,10 @@ pre {
         }
     }
 
-    >svg {
-        position: absolute;
+    img {
+        width: 105px;
+        height: 105px;
+        border-radius: 50%;
     }
 
     .single-post & {
