@@ -10,7 +10,7 @@
     left: 0;
     width: 100%;
     font-family: var(--accentFont);
-    background: var(--mainColor);
+    // background: var(--mainColor);
 
     @include breakpoint(up, lg) {
         padding: 2rem;
