@@ -46,11 +46,16 @@ svg {
 }
 
 .page__hero {
-    min-height: 75vh;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    padding: 100px 0 5vw;
+
+    @include breakpoint(up, xl) {
+        padding: 0;
+        min-height: 75vh;
+    }
 
     .blog & {
         @include breakpoint(down, lg) {
